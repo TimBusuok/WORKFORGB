@@ -2,6 +2,16 @@
 
 // N = 5 -> "5, 4, 3, 2, 1"
 // N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
+
+string NumMassive(int num, int end)
+{
+    if(num == end)
+    {
+        return num.ToString();
+    }
+    return (num + ", " + NumMassive(num - 1, end));
+}
+// сделали комит для EnterData
 int EnterData(string text)
 {
     Console.WriteLine(text);
